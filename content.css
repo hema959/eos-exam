@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Playwrite GB S", serif;
+}
+
+body {
+    background-color:rgb(121, 127, 154);
+    color: #333;
+}
+
+.navbar {
+    background-color:#0a5674;;
+    overflow: hidden;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navbar ul li {
+    float: left;
+}
+
+.navbar ul li a {
+    display: block;
+    padding: 14px 20px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover {
+    background-color: #575757;
+}
+
+.carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 8px;
+}
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-images img {
+    max-width: 100%;
+    display: none;
+}
+
+.carousel-images img.active {
+    display: block;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(155, 76, 76, 0.5);
+    color:blanchedalmond;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+.links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.links h2 {
+    margin-bottom: 10px;
+}
+
+.links ul {
+    list-style-type: none;
+}
+
+.links ul li {
+    margin: 5px 0;
+}
+
+.links ul li a {
+    text-decoration: none;
+    color: #ec0e0e;
+}
+
+.links ul li a:hover {
+    text-decoration: underline;
+}

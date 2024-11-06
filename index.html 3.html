@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="content.css">
+    <title>Menu</title>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html.html">Home</a></li>
+            <li><a href="index.html.html">Menu</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">online orders</a></li>
+        </ul>
+    </nav>
+
+    <div class="carousel">
+        <div class="carousel-images">
+            <img src="img/dindigul biriyani.jpg" alt="Delicious Food 1" class="active" height="400px" width="400px">
+            <img src="img/ambur biryani.jpg" alt="Delicious Food 2" height="400px" width="400px">
+            <img src="img/hyderabadi biryani.webp" alt="Delicious Food 3" height="400px" width="400px">
+            <img src="img/kerala biryani.webp" alt="Delicious Food 3" height="400px" width="400px">
+            <img src="img/bombay biryani.jpg" alt="Delicious Food 3" height="400px" width="400px">
+            <img src="img/bangalore.avif" alt="Delicious Food 3" height="400px" width="400px">
+        </div>
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+
+    <div class="links">
+        <h2>More About My Shop</h2>
+        <ul>
+            <li><a href="audio.mp3" target="_blank">AUDIO FILE</a></li>
+            <li><a href="img/menu card.pdf" target="_blank">MENU </a></li>
+        </ul>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel-images img');
+        const totalImages = images.length;
+
+        function changeSlide(direction) {
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + direction + totalImages) % totalImages;
+            images[currentIndex].classList.add('active');
+        }
+    </script>
+</body>
+</html>
